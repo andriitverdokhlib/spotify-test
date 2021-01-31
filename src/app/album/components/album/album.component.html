@@ -1,0 +1,26 @@
+<div class="wrapper" *ngIf="albumDetails$ | async; let details">
+  <div class="album-description">
+    <div class="left"><img [src]="details.images[1].url"></div>
+    <div class="right">
+      <div class="description">
+        <div>Artists name: <span *ngFor="let name of details.artists">{{name}}</span></div>
+        <div>Album: <span>{{details.name}}</span></div>
+        <div>Release Date: <span>{{details.release_date}}</span></div>
+      </div>
+      <div class="back">
+        <button mat-flat-button color="primary" (click)="back()">Back</button>
+      </div>
+    </div>
+  </div>
+  <div class="tracks">
+    <div class="title">Tracks</div>
+    <div class="tracks-wrapper">
+      <div class="track-item" *ngFor="let track of details.tracks">
+        <div class="name">{{track.name}}</div>
+        <div class="play-preview">
+          <mat-icon>play_arrow</mat-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

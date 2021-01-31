@@ -1,0 +1,82 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .album-description {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+
+    .left {
+      img {
+        width: 140px;
+        height: 140px;
+      }
+    }
+
+    .right {
+      margin-left: 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .description {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 14px;
+
+          span {
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+
+  .tracks {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .tracks-wrapper {
+      margin: 20px;
+      padding: 20px;
+      border: 1px dashed dodgerblue;
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+
+      .track-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 0;
+
+        .name {
+          flex: 1;
+        }
+
+        .play-preview {
+          flex: 3;
+          text-align: left;
+
+          .mat-icon {
+            cursor: pointer;
+            color: #3f51b5;
+          }
+        }
+      }
+    }
+  }
+}

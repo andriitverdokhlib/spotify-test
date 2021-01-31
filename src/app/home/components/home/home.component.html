@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">
+  <form [formGroup]="searchForm">
+    <mat-form-field>
+      <mat-label>Search Artists</mat-label>
+      <input matInput placeholder="Search ..." formControlName="search">
+    </mat-form-field>
+  </form>
+</mat-toolbar>
+
+<mat-list>
+  <mat-list-item *ngIf="(artists$ | async).length > 0">
+    <div class="artist-block">
+      <div class="name ">Artist name</div>
+      <div class="genres-block">
+        <span class="title">Genres</span>
+      </div>
+    </div>
+  </mat-list-item>
+
+  <mat-list-item *ngFor="let artist of (artists$ | async)" class="selected-item" (click)="goToArtistpage(artist.id)">
+    <div class="artist-block">
+      <div class="name">{{artist.name}}</div>
+      <div class="genres-block">
+        <mat-chip-list>
+          <mat-chip color="accent" *ngFor="let genre of artist.genres">{{genre}}</mat-chip>
+        </mat-chip-list>
+      </div>
+    </div>
+  </mat-list-item>
+</mat-list>
+
+<div class="search-history" *ngIf="(history$ | async).length > 0">
+  <div class="title">Search History</div>
+  <div class="history-artist" *ngFor="let artist of (history$ | async)" (click)="goToArtistpage(artist.id)">{{artist.name}}</div>
+</div>
+

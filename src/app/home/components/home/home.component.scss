@@ -1,0 +1,77 @@
+.mat-toolbar {
+  height: 100px;
+
+  .mat-form-field {
+    width: 300px;
+  }
+}
+
+.selected-item {
+  &:hover {
+    background-color: lightblue;
+    cursor: pointer;
+  }
+
+  .artist-block {
+    .name {
+      font-weight: normal;
+    }
+  }
+}
+
+.artist-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .name {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .genres-block {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .title {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.search-history {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: lightblue;
+  border-radius: 20px;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  .title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #3f51b5;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .history-artist {
+    margin-left: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: cornflowerblue;
+    }
+  }
+}

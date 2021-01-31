@@ -1,0 +1,20 @@
+<div class="wrapper">
+
+  <div class="top">
+    <div class="title">Albums</div>
+    <div class="back">
+      <button mat-flat-button color="primary" (click)="back()">Back</button>
+    </div>
+  </div>
+
+  <div class="albums-wrapper">
+    <div class="card" *ngFor="let album of (albums$ | async)">
+      <div class="img">
+        <img [src]="album.images[1].url">
+      </div>
+      <div class="btn">
+        <button (click)="goToAlbum(album.id)">Album Details</button>
+      </div>
+    </div>
+  </div>
+</div>

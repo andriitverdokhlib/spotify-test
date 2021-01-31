@@ -1,0 +1,52 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .albums-wrapper {
+    padding: 20px;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: lightblue;
+      border: 3px solid cornflowerblue;
+      padding: 10px;
+
+      .img {
+        img {
+          width: 100%;
+        }
+      }
+
+      .btn {
+        button {
+          width: 100%;
+          background-color: #3f51b5;
+          color: white;
+          outline: none;
+          height: 30px;
+          font-weight: 500;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
